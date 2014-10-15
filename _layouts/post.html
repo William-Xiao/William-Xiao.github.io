@@ -39,12 +39,7 @@ var duoshuoQuery = {short_name:"william-xiao"};
     </div>
 </nav>
 
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="http://william-xiao.github.io/{{ page.url }}">
-</div>
-<!-- 多说评论框 end -->
-
-<!-- <div class="comment">
+<div class="comment">
     {% if site.disqus.config %}
         <div class="comment-cnt">
             <div id="disqus_thread"></div>
@@ -52,11 +47,16 @@ var duoshuoQuery = {short_name:"william-xiao"};
     {% else %}
         {% if site.duoshuo.config %}
         <div class="comment-cnt">
-            <div class="ds-thread"></div>
+            <div class="ds-thread">
+                <!-- 多说评论框 start -->
+                <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="http://william-xiao.github.io/{{ page.url }}">
+                </div>
+                <!-- 多说评论框 end -->
+            </div>
         </div>
         {% endif %}
     {% endif %}
-</div> -->
+</div>
 
 
 
