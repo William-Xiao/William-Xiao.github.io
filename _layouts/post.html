@@ -3,6 +3,20 @@ layout: default
 isPost: true
 comment: true
 ---
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"william-xiao"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+
 <article class="main-article main-article-page">
     <div class="violet-title">
         <h3 class="violet-title-item">{{ page.title }}</h3>
@@ -24,7 +38,13 @@ comment: true
         {% endif %}
     </div>
 </nav>
-<div class="comment">
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="http://william-xiao.github.io/{{ page.url }}">
+</div>
+<!-- 多说评论框 end -->
+
+<!-- <div class="comment">
     {% if site.disqus.config %}
         <div class="comment-cnt">
             <div id="disqus_thread"></div>
@@ -36,22 +56,7 @@ comment: true
         </div>
         {% endif %}
     {% endif %}
-</div>
+</div> -->
 
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="http://william-xiao.github.io/{{ page.url }}">
-</div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"william-xiao"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-<!-- 多说公共JS代码 end -->
+
+
