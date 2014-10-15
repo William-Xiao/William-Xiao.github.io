@@ -40,7 +40,7 @@ timezone:      null
 
 #站点基础配置
 title: William
-subTitle: “尽可能广泛地涉猎各门学问，并且尽可能深入地择一钻研。”<br>（Try to learn something about everything and everything about something.）<br>--赫胥黎
+subTitle: “尽可能广泛地涉猎各门学问，并且尽可能深入地择一钻研。”<br>（Try to learn something about everything and everything about something.）--赫胥黎
 description: William's Blog
 url: http://William-Xiao.github.io
 #feed: /atom.xml
