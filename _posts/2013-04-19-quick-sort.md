@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 七大基本排序算法之堆排序
-description: 堆排序算法
+title: 七大基本排序算法之快速排序
+description: 快速排序算法
 keywords: 数据结构与算法
 ---
 
