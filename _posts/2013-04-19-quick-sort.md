@@ -5,8 +5,7 @@ description: 堆排序算法
 keywords: 数据结构与算法
 ---
 
-{% highlight java %}
-
+```java
 /**
  * 快速排序
  * @author xiaomi
@@ -67,9 +66,7 @@ public class QuickSort {
         return low;
     }
 }
-
-
-{% endhighlight %}
+```
 
 补充两个全面介绍排序算法的链接：
 wiki
