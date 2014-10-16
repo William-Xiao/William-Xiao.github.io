@@ -5,7 +5,7 @@ description: 堆排序算法
 keywords: 数据结构与算法
 ---
 
-{% highlight Java %}
+{% highlight java %}
 
 /**
  * 快速排序
