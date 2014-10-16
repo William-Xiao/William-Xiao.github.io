@@ -3,7 +3,7 @@ layout: post
 title: 【Java并发编程】并发编程大合集
 description: 
 keywords: 
-category: 心情文字
+categories: [Java,多线程]
 ---
 转载自：<http://blog.csdn.net/ns_code/article/details/17539599>
 
