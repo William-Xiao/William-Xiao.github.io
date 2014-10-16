@@ -2,7 +2,8 @@
 layout: post
 title: 七大基本排序算法之冒泡排序
 description: 冒泡排序算法
-keywords: 数据结构与算法
+keywords: 
+category: 数据结构与算法
 ---
 
 ```java

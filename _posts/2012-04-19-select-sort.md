@@ -2,7 +2,8 @@
 layout: post
 title: 七大基本排序算法之选择排序
 description: 选择排序算法
-keywords: 数据结构与算法
+keywords: 
+category: 数据结构与算法
 ---
 
 ```java

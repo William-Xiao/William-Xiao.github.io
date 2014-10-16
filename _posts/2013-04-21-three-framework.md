@@ -3,6 +3,7 @@ layout: post
 title: 三大框架的技术起源
 description: Struts、Hibernate和Spring是我们Java开发中的常用关键，他们分别针对不同的应用场景给出最合适的解决方案。但你是否知道，这些知名框架最初是怎样产生的? 
 keywords: 专业-Java-J2EE
+category: J2EE
 ---
 Struts、Hibernate和Spring是我们Java开发中的常用关键，他们分别针对不同的应用场景给出最合适的解决方案。但你是否知道，这些知名框架最初是怎样产生的? 
 
