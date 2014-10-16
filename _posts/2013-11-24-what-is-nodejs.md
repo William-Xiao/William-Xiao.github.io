@@ -3,7 +3,7 @@ layout: post
 title: 转：什么是Node.js？
 description: ode不是万能药!但的确能解决一些关键问题。学习Node不是一件轻松事儿，但你所收到的回报是对得起你的付出的。因为当下Web应用开发中的诸多难题唯有JavaScript才能解决。
 keywords: 
-category: J2EE
+category: node.js
 ---
 Node不是万能药!但的确能解决一些关键问题
 
