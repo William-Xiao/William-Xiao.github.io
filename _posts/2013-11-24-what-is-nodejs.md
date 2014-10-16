@@ -61,7 +61,7 @@ http.createServer(function(request, response) {
         });
     });
 }).listen(8080);
-console.log(&quot;Server running at http://localhost:8080/&quot;);
+console.log("Server running at http://localhost:8080/");
 ```
 
 感谢Mike Amundsen，他给出了这段代码的相似的实现。这个例子是由Devon Govett在Nettuts+上提交的一段代码，尽管已经根据新版本的Node作了更新，但Devon的整个帖子是一个非常好的入门学习教材，对于初学者来说更是如此。 如果你是一个新手，你可以将上述代码保存到一个文本文件中，命名为NodeFileServer.js。在运行之前你需要一个Node运行环境，最新的Node版本可以从官网下载这个文件或者从github上将源码取下来。你需要编译源码，如果你没有用过Unix、对make和configure不甚熟悉，则需要查阅在线编译手册来寻求帮助。
@@ -70,11 +70,14 @@ Node不是JavaScript，Node可以运行JavaScript
 
 刚刚你将NodeFileServer.js存成了某个文件，别担心，我们等下会回过头来运行它的。现在，让我们移步到现实当中来，在Unix中执行典型的配置和编译命令：
 
+```PowerShell
 ./configure
 make
 make install
-这让我们确信一个事实：Node不是JavaScript，Node是一个可以运行JavaScript的程序，但Node绝对不是JavaScript。实际上，Node是基于C写的程序。可以通过ls来查看Node/src目录中的文件，可以看到Node的源码：
+```
 
+这让我们确信一个事实：Node不是JavaScript，Node是一个可以运行JavaScript的程序，但Node绝对不是JavaScript。实际上，Node是基于C写的程序。可以通过ls来查看Node/src目录中的文件，可以看到Node的源码：
+![](/images/post/2013/nodejs-source.png)
 
 大多数人会以为，JavaScript是一门糟糕的语言，更不用说用它来实现服务器端的功能了，其实你只对了一半。不错，对于操作系统级别的 Socket和网络编程来说，JavaScript可能并不能胜任。但Node并不是JavaScript实现的，它是基于C实现的。C语言是可以完美的 胜任任意量级的网络编程的。而JavaScript则完全有能力将指令传递给C程序，然后由C程序来操控操作系统“地下城”。实际上，和C语言相 比，JavaScript更容易被开发者们接触到，这是值得引起注意的地方，如果你想用Node进行一些严肃的编程的话，这个原因会被一再提及。 Node的基本用法进一步反映出了Node是如何和JavaScript一起工作的，Node不是JavaScript。你可以通过命令行来运行它：
 
@@ -107,12 +110,15 @@ Node也可以展示出二进制的图片文件。当你回头再看这段短小�
 
 围绕Node的话题总是会比纯粹运行在服务器端的代码更值得花点时间来讨论。不管怎样，我们还是从一段代码开始我们的话题，概览一下NodeFileServer.js文件，观察代码：
 
+```JavaScript
 var http = require('http');
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.end('Hello World\n');
 }).listen(1337, "127.0.0.1");
 console.log('Server running at http://127.0.0.1:1337/');
+```
+
 首先调用了函数require()，require()是程序员最常用的函数之一。实际上，在CommonJS规范中也有提到这个函数，在讨论到关 于JavaScript模块概念的时候有提及，此外，Davd Flanagan在2009年的一个很酷的实现中也有提到。换句话说，require()对于你来说可能是个新鲜事物，但它不是Node随意添加的一个函 数，他是使用JavaScript进行模块化编程的核心概念，Node将这一特性发挥的淋漓尽致。 接下来，http变量用以创建一个服务器。这个服务使用一个回调函数来处理当产生一个连接时的动作。这里的回调函数并未对请求作过多修饰，仅仅以text/plain格式输出一个字符串“Hello World”作为请求响应。这个逻辑非常简单。 实际上，这里展示了使用Node的标准模式： 定义交互类型，并获得一个用以处理这个交互的变量(通过require())。 创建一个新的服务(通过createServer())。 给服务绑定一个回调，用以处理请求。包括处理请求的函数应当包括一个请求…，以及一个响应 通知服务器启动服务，这里需要指定IP和端口(通过listen)。
 
 解释器之惑
