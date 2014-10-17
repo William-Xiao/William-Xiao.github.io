@@ -45,8 +45,8 @@ alert(i); //10
 ```
 
 从上面的实例可以看到两点：
-第一，JavaScript中的方法内部定义变量的时候如果没有加var，就是全局变量；否则为局部变量；
-第二，当fun()没有执行的时候，方法内部的全局变量是不会声明并且定义的。
+* JavaScript中的方法内部定义变量的时候如果没有加var，就是全局变量；否则为局部变量；
+* 当fun()没有执行的时候，方法内部的全局变量是不会声明并且定义的。
  
 Reference:
-http://www.blogjava.net/ycyk168/archive/2008/06/27/211182.html
+<http://www.blogjava.net/ycyk168/archive/2008/06/27/211182.html>
