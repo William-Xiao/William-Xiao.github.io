@@ -21,7 +21,7 @@ comment: true
         <a class="prev" href="{{ page.next.url }}" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>{{ page.next.title | truncatewords:5 }}</a>
         {% endif %}
         {% if page.previous %}
-        <a class="next" href="{{ page.previous.url }}" rel="bookmark"></i>{{ page.previous.title | truncatewords:5 }}<i class="fa fa-chevron-circle-right"></a>
+        <a class="next" href="{{ page.previous.url }}" rel="bookmark">{{ page.previous.title | truncatewords:5 }}<i class="fa fa-chevron-circle-right"></i></a>
         {% endif %}
     </div>
 </nav>
