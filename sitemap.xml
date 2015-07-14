@@ -20,7 +20,7 @@ layout: blank
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>{{ site.url }}/contact.html</loc>
+        <loc>{{ site.url }}/aboutme.html</loc>
         <priority>0.6</priority>
     </url>
     {% for post in site.posts %}

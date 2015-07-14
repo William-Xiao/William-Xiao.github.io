@@ -53,8 +53,8 @@ nav:
     url: /category.html
   - text: 文章归档
     url: /archives.html
-  - text: 联系我
-    url: /contact.html
+  - text: 关于我
+    url: /aboutme.html
 #  - text: 博客源代码
 #    url: https://github.com/pizn/pizn.github.com
 
